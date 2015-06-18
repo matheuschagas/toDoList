@@ -3,4 +3,6 @@ To Do List um projeto em Ruby on Rails e angular JS e mais alguns frameworks com
 
 #Membros
 
+Jonata Santos
+Gustavo Francisco
 Matheus Marrane
