@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+var app = angular.module('toDoList', []);
+app.controller('UsuarioCtrl', ['$http', function($http){
+    var usuario = this;
+    this.jaExiste = function(nome){
+        $http.get('/usuarios/' + nome + '.json').success(function(){return true;}).error(function(){return false;});
+    };
+}]);

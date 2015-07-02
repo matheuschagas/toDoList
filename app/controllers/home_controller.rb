@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   end
 
   def login
-
+    @titulo = 'Login'
   end
 
   def sair

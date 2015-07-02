@@ -1,9 +1,9 @@
-<h1>Editing Usuario</h1>
+<h1>Editar dados da Conta</h1>
 
-<% @usuarios.each do |usuario| %>
-<%= render 'form' %>
-<input type="text" class="form-control" value="<%=  usuario.nome %>">
 
-<% end %>
+<form>
+<input type="text" class="form-control" value="<%=  @usuario.nome %>">
+</form>
+
 <%= link_to 'Show', @usuario %> |
 <%= link_to 'Back', usuarios_path %>

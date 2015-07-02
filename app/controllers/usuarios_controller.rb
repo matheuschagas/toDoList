@@ -19,8 +19,9 @@ class UsuariosController < ApplicationController
 
   # GET /usuarios/1/edit
   def edit
-    @usuario = Usuario.find(usuario_params)
+    @usuario = Usuario.find(params[:id])
   end
+
 
   # POST /usuarios
   # POST /usuarios.json
@@ -29,7 +30,7 @@ class UsuariosController < ApplicationController
 
     respond_to do |format|
       if @usuario.save
-        format.html { redirect_to @usuario, notice: 'Usuario was successfully created.' }
+        format.html { redirect_to @usuario, notice: 'Usuário criado com sucesso! faça o login.' }
         format.json { render :show, status: :created, location: @usuario }
       else
         format.html { render :new }
@@ -65,11 +66,22 @@ class UsuariosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_usuario
-      @usuario = Usuario.find(params[:id])
+
+      if params[:id].to_i != 0
+        @usuario = Usuario.find(params[:id])
+      else
+        @usuario = Usuario.find_by_login(params[:id])
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def usuario_params
-      params[:usuario]
+      a = {}
+      a['login']=params['login']
+      a['senha']=params['senha']
+      a['nome'] = params['nome']
+      a['dataNasc'] = params['dataNasc']
+      a['email'] = params['email']
+      return a
     end
 end
