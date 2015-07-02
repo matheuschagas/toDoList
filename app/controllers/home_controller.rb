@@ -6,7 +6,11 @@ class HomeController < ApplicationController
   end
 
   def login
+<<<<<<< HEAD
     @titulo = 'Login'
+=======
+
+>>>>>>> origin/master
   end
 
   def sair
