@@ -7,6 +7,8 @@ class TarefasController < ApplicationController
     @tarefas = Tarefa.all
   end
 
+  
+
   # GET /tarefas/1
   # GET /tarefas/1.json
   def show

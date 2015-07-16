@@ -22,8 +22,8 @@
           <%= text_field_tag(:confirmaSenha, value = nil, options = {'class' =>  'form-control', 'type' => 'password'}) %>
         </div>
         <div class="form-group">
-          <%= label_tag(:nomeCompleto, 'Nome Completo') %>
-          <%= text_field_tag(:nomeCompleto, value = nil, options = {'class' =>  'form-control'}) %>
+          <%= label_tag(:nome, 'Nome Completo') %>
+          <%= text_field_tag(:nome, value = nil, options = {'class' =>  'form-control'}) %>
         </div>
         <div class="form-group">
           <%= label_tag(:dataNasc, 'Data de Nascimento') %>
@@ -33,7 +33,10 @@
           <%= label_tag(:email, 'Email') %>
           <%= text_field_tag(:email, value = nil, options = {'class' =>  'form-control', 'type' => 'email'}) %>
         </div>
-
+        <div class="actions">
+        </div>
+        <%= submit_tag %>
+        </div>
 
     <% end %>
   </div>
