@@ -6,9 +6,12 @@ class HomeController < ApplicationController
   end
 
   def login
-
+    if session[:usuario] then
+      redirect_to('/index')
+    end
   end
 
+  end
   def sair
     session.delete(:usuario)
     redirect_to('/')
