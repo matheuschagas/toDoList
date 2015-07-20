@@ -6855,3 +6855,192 @@ Started GET "/login" for 127.0.0.1 at 2015-07-17 17:22:46 -0300
 Processing by HomeController#login as HTML
   Rendered home/login.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-20 15:24:24 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+SyntaxError (/home/guga581/toDoList/toDoList/app/controllers/home_controller.rb:19: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/home_controller.rb:19: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (29.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (4.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (80.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (141.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-20 15:25:01 -0300
+Processing by HomeController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-07-20 15:25:01 -0300
+Processing by HomeController#login as HTML
+  Rendered home/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 760ms (Views: 759.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2015-07-20 15:25:08 -0300
+Processing by UsuariosController#new as HTML
+  Rendered usuarios/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 129ms (Views: 68.6ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2015-07-20 15:26:16 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6HAj5KzPR0t2sLKAZ4uh3BPIOY5R3O+X3oHBvsPvuZ7nQG+trmRSjBFRZmf+2NeXettB+74NNxuukobCeglDzQ==", "login"=>"helio", "senha"=>"fuques", "confirmaSenha"=>"fuques", "nome"=>"Hélio Fuques", "dataNasc"=>"1995-05-21", "email"=>"fuques@fuques.uy", "commit"=>"Save changes"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO `usuarios` (`login`, `senha`, `nome`, `dataNasc`, `email`, `created_at`, `updated_at`) VALUES ('helio', 'fuques', 'Hélio Fuques', '1995-05-21', 'fuques@fuques.uy', '2015-07-20 18:26:16', '2015-07-20 18:26:16')[0m
+  [1m[35m (34.5ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/usuarios/3
+Completed 302 Found in 54ms (ActiveRecord: 35.9ms)
+
+
+Started GET "/usuarios/3" for 127.0.0.1 at 2015-07-20 15:26:16 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 3 LIMIT 1[0m
+  Rendered usuarios/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 224ms (Views: 159.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-20 15:26:32 -0300
+Processing by HomeController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-07-20 15:26:32 -0300
+Processing by HomeController#login as HTML
+  Rendered home/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 75ms (Views: 73.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login?login=helio&senha=fuques" for 127.0.0.1 at 2015-07-20 15:26:43 -0300
+Processing by HomeController#login as HTML
+  Parameters: {"login"=>"helio", "senha"=>"fuques"}
+  Rendered home/login.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 138ms (Views: 137.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-20 15:26:48 -0300
+Processing by HomeController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-07-20 15:26:48 -0300
+Processing by HomeController#login as HTML
+  Rendered home/login.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 104ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tarefas/new" for 127.0.0.1 at 2015-07-20 15:26:55 -0300
+Processing by TarefasController#new as HTML
+  Rendered tarefas/_form.html.erb (99.0ms)
+  Rendered tarefas/new.html.erb within layouts/application (149.7ms)
+Completed 200 OK in 883ms (Views: 617.9ms | ActiveRecord: 40.1ms)
+
+
+Started GET "/login?login=helio&senha=fuques" for 127.0.0.1 at 2015-07-20 15:27:06 -0300
+Processing by HomeController#login as HTML
+  Parameters: {"login"=>"helio", "senha"=>"fuques"}
+  Rendered home/login.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 83ms (Views: 82.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tarefas" for 127.0.0.1 at 2015-07-20 15:27:28 -0300
+Processing by TarefasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j4MAdkqPZoWeYHH8TQODcIQdMm/W2ZuzDCOzSuYUDtGAs0w/SCRzQvmBpRvUUPU77Q5KGjkIQz98MPQ2X/L0gg==", "texto"=>"fuques", "data"=>"2015-07-20", "id"=>"", "commit"=>"Create Tarefa"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `tarefas` (`texto`, `data`, `created_at`, `updated_at`) VALUES ('fuques', '2015-07-20 00:00:00', '2015-07-20 18:27:28', '2015-07-20 18:27:28')[0m
+  [1m[35m (118.3ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/tarefas/1
+Completed 302 Found in 125ms (ActiveRecord: 118.8ms)
+
+
+Started GET "/tarefas/1" for 127.0.0.1 at 2015-07-20 15:27:28 -0300
+Processing by TarefasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTarefa Load (0.4ms)[0m  [1mSELECT  `tarefas`.* FROM `tarefas` WHERE `tarefas`.`id` = 1 LIMIT 1[0m
+  Rendered tarefas/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 107ms (Views: 104.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-20 15:28:00 -0300
+Processing by HomeController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-07-20 15:28:00 -0300
+Processing by HomeController#login as HTML
+  Rendered home/login.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 61ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2015-07-20 15:28:10 -0300
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT `usuarios`.* FROM `usuarios`
+  Rendered usuarios/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 366ms (Views: 364.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2015-07-20 15:30:16 -0300
+
+ActionController::RoutingError (No route matches [GET] "/home/index"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (98.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (78.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (146.8ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2015-07-20 15:31:58 -0300
+Processing by UsuariosController#new as HTML
+  Rendered usuarios/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 103ms (Views: 101.3ms | ActiveRecord: 0.0ms)

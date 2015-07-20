@@ -10,8 +10,6 @@ class HomeController < ApplicationController
       redirect_to('/index')
     end
   end
-
-  end
   def sair
     session.delete(:usuario)
     redirect_to('/')
