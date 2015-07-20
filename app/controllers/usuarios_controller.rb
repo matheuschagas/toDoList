@@ -61,6 +61,16 @@ class UsuariosController < ApplicationController
     end
   end
 
+  def validate
+    @usuario = Usuario.find_by_login(params['login']).find_by_senha(params['senha'])
+    len = @usuario.lenght
+    if(len>0)
+      session[:id] = @usuario.__id__
+    else
+      format.html { redirect_to login, notice: 'Usuário ou senha incorreto'}
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_usuario

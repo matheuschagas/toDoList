@@ -7,7 +7,7 @@
 </div>
 <div class="row">
   <div class="col-md-offset-4 col-md-4">
-    <form action="">
+    <%= form_tag({controller: 'usuarios', action: 'validate'}, method: 'post') do%>
       <div class="form-group">
         <label for="login">Login</label>
         <input class="form-control" type="text" name="login" id="login">
@@ -17,7 +17,7 @@
         <input class="form-control" type="password" name="senha" id="senha">
       </div>
       <button type="submit" class="btn btn-lg btn-block btn-primary">Entrar</button>
-    </form>
+    <% end %>
   </div>
 </div>
 <div class="row">
