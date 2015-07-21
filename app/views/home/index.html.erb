@@ -4,10 +4,25 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-2">
     <div class="container-fluid">
       <div class="row">
+        <%= form_tag({controller: 'tarefas', action: 'create'}, method: 'post') do%>
+            <div class="form-group">
+              <%= label_tag(:texto, 'Digite a sua tarefa') %>
+              <%= text_field_tag(:texto, value = nil, options = {'class' =>  'form-control'}) %>
+            </div>
+            <div class="form-group">
+              <%= label_tag(:data, 'Data da Tarefa') %>
+              <%= text_field_tag(:data, value = nil, options = {'class' =>  'form-control', 'type' => 'date'}) %>
+            </div>
+            <input name="id" type="hidden" value="<%= session[:idUsuario]%>">
+            <div class="actions">
+            </div>
+            <input type="submit" value="Criar Tarefa">
+            </div>
 
+        <% end %>
       </div>
     </div>
   </div>
@@ -27,12 +42,5 @@
       </div>
       <% end %>
     </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12 text-center">
-    <h2> Para criar uma tarefa, clique aqui:</h2>
-    <%= link_to 'New Tarefa', new_tarefa_path %>
   </div>
 </div>
