@@ -30,14 +30,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">To Do List</a>
+      <a class="navbar-brand" href="/">To Do List<% if session[:idUsuario] then %> - Olá, <%= session[:nome] %> <% end %></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <% if session[:usuario] then %>
-            <li><a href="/usuarios">Conta</a></li>
+        <% if session[:idUsuario] then %>
+            <li><a href="/usuarios/<%= session[:idUsuario] %>/edit">Conta</a></li>
             <li><a href="/sair">Sair</a></li>
         <% else %>
             <li><a href="/usuarios/new">Cadastre-se</a></li>

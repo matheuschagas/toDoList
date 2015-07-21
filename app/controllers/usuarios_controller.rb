@@ -53,6 +53,7 @@ class UsuariosController < ApplicationController
     end
   end
 
+
   # DELETE /usuarios/1
   # DELETE /usuarios/1.json
   def destroy
