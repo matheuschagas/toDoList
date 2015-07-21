@@ -7,6 +7,8 @@ class TarefasController < ApplicationController
     @tarefas = Tarefa.all
   end
 
+
+
   # GET /tarefas/1
   # GET /tarefas/1.json
   def show
@@ -69,6 +71,10 @@ class TarefasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tarefa_params
-      params[:tarefa]
+      a = {}
+      a['texto']=params['texto']
+      a['data']=params['data']
+      a['usuario_id']=params['id']
+      return a
     end
 end
