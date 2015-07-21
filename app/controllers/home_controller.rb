@@ -2,6 +2,9 @@ class HomeController < ApplicationController
   def index
     if !session[:idUsuario] then
       redirect_to('/login')
+    else
+      @usuario = Usuario.find(session[:idUsuario])
+      @tarefas = @usuario.tarefas
     end
   end
 
