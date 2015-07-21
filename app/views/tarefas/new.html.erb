@@ -17,7 +17,7 @@
           <%= label_tag(:data, 'Data da Tarefa') %>
           <%= text_field_tag(:data, value = nil, options = {'class' =>  'form-control', 'type' => 'date'}) %>
         </div>
-        <input name="id" type="hidden" value="<% session[:usuario]%>">
+        <input name="id" type="hidden" value="<%= session[:idUsuario]%>">
         <div class="actions">
         </div>
         <%= render 'form' %>
